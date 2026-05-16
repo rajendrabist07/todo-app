@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+  }
+
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .input-glass {
+    @apply w-full px-4 py-3 rounded-xl text-white placeholder-white/50;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .input-glass:focus {
+    @apply outline-none ring-2 ring-purple-500;
+  }
+
+  .btn-primary {
+    @apply w-full py-3 font-semibold rounded-xl transition-all duration-300 shadow-lg;
+    background: linear-gradient(135deg, #9333ea 0%, #db2777 100%);
+  }
+
+  .btn-primary:hover {
+    transform: scale(1.02);
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300;
+  }
+}
