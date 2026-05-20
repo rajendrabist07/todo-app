@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Mail, Lock, User, Eye, EyeOff, LogIn, UserPlus } from 'lucide-react';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const LoginPage = ({ onLogin, onRegister }) => {
     const [isLogin, setIsLogin] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
@@ -27,6 +29,8 @@ const LoginPage = ({ onLogin, onRegister }) => {
         return Object.keys(newErrors).length === 0;
     };
 
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validate()) return;
@@ -47,7 +51,8 @@ const LoginPage = ({ onLogin, onRegister }) => {
     };
 
     const handleGoogleLogin = () => {
-        window.location.href = 'http://localhost:5002/api/auth/google';
+        window.location.href =
+            `${API_URL}/auth/google`;
     };
 
     return (
