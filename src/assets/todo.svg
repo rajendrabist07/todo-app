@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="40%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="ringTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="ringBottom" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7f77dd"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+    <linearGradient id="checkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="dot1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="dot2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#c026d3"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="dot3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="bar3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#7f77dd"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="100" height="100" rx="22" fill="#0d0826"/>
+
+  <!-- Gradient border stroke -->
+  <rect width="100" height="100" rx="22" fill="none" stroke="url(#borderGrad)" stroke-width="2.5"/>
+
+  <!-- Circle ring — top arc (orange to pink) -->
+  <path
+    d="M 50 18 A 32 32 0 0 1 82 50"
+    fill="none"
+    stroke="url(#ringTop)"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+
+  <!-- Circle ring — bottom arc (purple to pink) -->
+  <path
+    d="M 82 50 A 32 32 0 1 1 50 18"
+    fill="none"
+    stroke="url(#ringBottom)"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+
+  <!-- Checkmark inside ring -->
+  <polyline
+    points="40,50 47,58 63,40"
+    fill="none"
+    stroke="url(#checkGrad)"
+    stroke-width="5.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Row 1: dot + bar (orange) -->
+  <circle cx="19" cy="36" r="4" fill="url(#dot1)"/>
+  <rect x="26" y="32" width="16" height="8" rx="4" fill="url(#bar1)"/>
+
+  <!-- Row 2: dot + bar (pink/purple) -->
+  <circle cx="19" cy="50" r="4" fill="url(#dot2)"/>
+  <rect x="26" y="46" width="13" height="8" rx="4" fill="url(#bar2)"/>
+
+  <!-- Row 3: dot + bar (blue) -->
+  <circle cx="19" cy="64" r="4" fill="url(#dot3)"/>
+  <rect x="26" y="60" width="10" height="8" rx="4" fill="url(#bar3)"/>
+</svg>
